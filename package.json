@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/molopark/BlockChain/issues"
   },
-  "homepage": "https://github.com/molopark/BlockChain#readme"
+  "homepage": "https://github.com/molopark/BlockChain#readme",
+  "dependencies": {
+    "sha256": "^0.2.0"
+  }
 }
