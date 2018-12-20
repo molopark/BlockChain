@@ -5,6 +5,8 @@ const sha256 = require('sha256');
 function Blockchain(){
   this.chain = [];
   this.pendingTransaction = [];
+  //제네시스 블럭 - 임의의 값
+  this.createNewBlock(100,'0','0');
 }
 
 //블록체인 프로토 타입 함수 정의
@@ -52,6 +54,17 @@ Blockchain.prototype.hashBlock = function(previousBlockHash,currentBlockData,non
   const dataAsString = previousBlockHash + nonce.toString() + JSON.stringify(currentBlockData);
   const hash = sha256(dataAsString);
   return hash
+}
+
+//pow 작업 함수 - 이전블록의 해쉬, 현재 블록 데이터와 nonce 값을 사용한다.
+Blockchain.prototype.proofOfWork = function(previousBlockHash,currentBlockData){
+  let nonce = 0;
+  let hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);
+  while(hash.substring(0,4) != '0000'){
+    nonce++;
+    hash = this.hashBlock(previousBlockHash,currentBlockData,nonce)
+  }
+  return nonce;
 }
 
 //Blockchain 모듈화

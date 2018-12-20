@@ -4,5 +4,18 @@ http://remix.ethereum.org/
 #javascript기반 블록체인개발강좌
 http://abc1211.tistory.com/516
 
-#sha256새시
+#sha256해시
 npm install --save sha256
+
+#용어정리
+POW (Proof Of Work) : 작업증명
+
+#서버구축 : 구글 express api 사용 (https://www.npmjs.com/package/express)
+npm install -save express
+npm i body-parser --save
+
+#서버자동 실행 : 실행(window 터미널에서 npm start 로 실행 : package.json 에 추가함 )
+npm i --save nodemon
+
+#데이터전송 테스트 : https://www.getpostman.com
+- 웹 상에서 데이터를 브라우저 주소로 전송하는 테스트시 사용하는 program
