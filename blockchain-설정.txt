@@ -13,6 +13,9 @@ POW (Proof Of Work) : 작업증명
 #서버구축 : 구글 express api 사용 (https://www.npmjs.com/package/express)
 npm install -save express
 npm i body-parser --save
+npm i uuid --save
+npm install request-promise --save
+npm install request --save
 
 #서버자동 실행 : 실행(window 터미널에서 npm start 로 실행 : package.json 에 추가함 )
 npm i --save nodemon

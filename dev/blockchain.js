@@ -1,10 +1,17 @@
 //sha256 모듈을 이용
 const sha256 = require('sha256');
 
+//현재 노드의 url -- package.json script 객체에서 3번째 방에 들어있는 데이터 http://localhost:3001
+const currentNodeUrl = process.argv[3];
+
 //블록체인 데이터 구조
 function Blockchain(){
   this.chain = [];
   this.pendingTransaction = [];
+  //현재 node url -- 이부분!!!
+  this.currentNodeUrl = currentNodeUrl;
+  this.networkNodes = [];
+
   //제네시스 블럭 - 임의의 값
   this.createNewBlock(100,'0','0');
 }
