@@ -9,6 +9,7 @@ npm install --save sha256
 
 #용어정리
 POW (Proof Of Work) : 작업증명
+채굴 (mine) : 이전 플럭의 해시값과 현재 블럭의 데이터와 nonce(임의값) 로 특정 난이도에 해당하는 해시값을 찾아내는 작업, 보통 해시값의 앞자리에 0이 몇개인 해시값을 찾아내는 작업을 수행, 난이도에 해당하는 해시값을 찾으면 채굴에 성공했다고 보고, 새로운 블럭이 만들어지며 채굴에 대한 보상을 받는다.
 
 #서버구축 : 구글 express api 사용 (https://www.npmjs.com/package/express)
 npm install -save express
