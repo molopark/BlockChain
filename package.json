@@ -27,9 +27,7 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "sha256": "^0.2.0",
+    "set-value": ">=2.0.1"
     "uuid": "^3.3.2"
-  },
-  "dependencies": {
-  "set-value": ">=2.0.1"
   }
 }
